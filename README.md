@@ -6,6 +6,8 @@ This repository contains data and code used to generate Figure 2 in the manuscri
 
 There is one R script associated with the manuscript, **"Coyote_HASE_Predation_Note.R"**, which imports, cleans, and summarizes raw data and generates two plots that are combined in illustrator to form Figure 2.
 
+![Figure 2. CAPTION](output/Figure_2.png){width="4in"}
+
 ------------------------------------------------------------------------
 
 ## Directory Information + Metadata
