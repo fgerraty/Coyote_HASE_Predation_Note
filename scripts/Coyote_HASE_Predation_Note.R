@@ -90,9 +90,9 @@ ggplot((seal_count_summary %>%
   geom_bar(stat = "identity", position="stack")+
   theme_few()+
   labs(y = "Maximum # Individuals Documented Per Year", 
-       x="Year", fill = "Age Class")+
-  scale_fill_manual(values = c("red", "#6497bf"), labels = c("Coyote-\nKilled Pup", "Pup"))+
-  theme(legend.position = c(0.904, 0.868),
+       x="Year", fill = "Category")+
+  scale_fill_manual(values = c("red", "#6497bf"), labels = c("Coyote-\nKilled Pup", "Pup (Alive)"))+
+  theme(legend.position = c(0.901, 0.868),
         legend.box.background = element_rect(colour = "black", linewidth = 1),
         panel.border = element_rect(colour = "black", linewidth = 1))
 
