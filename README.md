@@ -20,9 +20,11 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
 
     Columns
 
-    -   Observation Type (either "Confirmed coyote predation" or "Suspected coyote predation")
-    -   Location (rookery site name)
-    -   Observation Date
+    -   observation_type (either "Confirmed coyote predation" or "Suspected coyote predation")
+    -   location (rookery site name)
+    -   observation_date
+    -   length (harbor seal standard length, cm)
+    -   length_actual_estimate (whether seal length was directly measured --- "actual"--- or needed to be estimated due to skull disarticulation from vertebral column --- "estimate")
 
 -   **MacKerricher_HASE_Counts_Post2018.csv** containing raw data from harbor seal population monitoring surveys at MacKerricher State Park from 2009-2018.
 
