@@ -2,7 +2,7 @@
 
 *FD Gerraty, S Grimes, S Pemberton, S Allen, S Codde. In Review.*
 
-This repository contains data and code used to generate Figure 2 in the manuscript "*Coyotes hunt harbor seal pups on the California coast*", in which we describe coyote predation of harbor seal pups at five locations from 2016-2024.
+This repository contains data and code used to generate Figure 2 in the manuscript "*Coyotes hunt harbor seal pups on the California coast*", in which we describe coyote predation of harbor seal pups at three locations from 2016-2024.
 
 There is one R script associated with the manuscript, **"Coyote_HASE_Predation_Note.R"**, which imports, cleans, and summarizes raw data and generates two plots that are combined in illustrator to form Figure 2.
 
