@@ -60,7 +60,7 @@ seal_count_summary <- seal_counts_pre2018 %>%
   summarise(max_count = max(count, na.rm = TRUE), .groups = "drop") %>% 
   bind_rows(., seal_counts_post2018, seal_predation_summary)
   
-# Assess mean and standard error of coyote-killed harbor seal pup length 
+# Assess mean and standard error of coyote-killed harbor seal pup length ####
 
 #Mean = 80.57 cm
 mean(predation_observations$length, na.rm = TRUE) 
@@ -68,6 +68,11 @@ mean(predation_observations$length, na.rm = TRUE)
 #SE = 0.89
 sd(predation_observations$length, na.rm = TRUE)/sqrt(length(na.omit(predation_observations$length)))
 
+# Assess proportion of coyote-killed harbor seal pups in first 20 days of pupping season (April 14th - May 4th) ####
+
+temp <- predation_observations %>% 
+  filter(day > 104 & 
+         day < 124)
 
 # PART 4: Generate Figures ----------------------------------------------------
 
