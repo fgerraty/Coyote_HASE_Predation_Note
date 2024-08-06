@@ -4,11 +4,11 @@
 
 This repository contains data and code used to generate Figure 2 in the manuscript "*Coyotes hunt harbor seal pups on the California coast*", in which we describe coyote predation of harbor seal pups at three locations from 2016-2024.
 
-There is one R script associated with the manuscript, **"Coyote_HASE_Predation_Note.R"**, which imports, cleans, and summarizes raw data and generates two plots that are combined in illustrator to form Figure 2.
+There is one R script associated with the manuscript, **"Coyote_HASE_Predation_Note.R"**, which imports, cleans, and summarizes raw data and generates two plots that are combined in illustrator to form Figure 2. The script also generates Figure S1.
 
 ![](output/Figure_2.png)
 
-**Figure 2.** (A) Seasonality of harbor seal pupping and coyote predation at MacKerricher State Beach. Black points represent the total number of pups counted (pooled across 2011-2018), the black line is a generalized additive model fitted to the pup counts, and the red vertical lines represent suspected and confirmed coyote predation events on harbor seal pups. (B) Abundance (maximum annual count) of harbor seal pups and counts of suspected or confirmed coyote predation events at MacKerricher State Beach. *Rookery monitoring was limited during the 2020 harbor seal pupping season due to COVID-19 restrictions, likely resulting in reduced maximum pup and coyote-killed pup counts.
+**Figure 2.** (A) Seasonality of harbor seal pupping and coyote predation at MacKerricher State Beach. Black points represent the total number of pups counted (pooled across 2011-2018), the black line is a generalized additive model fitted to the pup counts, and the red vertical lines represent suspected and confirmed coyote predation events on harbor seal pups. (B) Abundance (maximum annual count) of harbor seal pups and counts of suspected or confirmed coyote predation events at MacKerricher State Beach. \*Rookery monitoring was limited during the 2020 harbor seal pupping season due to COVID-19 restrictions, likely resulting in reduced maximum pup and coyote-killed pup counts.
 
 ------------------------------------------------------------------------
 
@@ -46,11 +46,19 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
 
 #### Folder "output" houses the following files
 
+-   **Figure_1.png**
+
+-   **Figure_2.png** (seasonality_plot.png and annual_summary.png annotated and combined in Illustrator)
+
+-   **Figure_3.png**
+
+-   **Figure_S1.png** (overall_abundance.png annotated in Illustrator)
+
 -   **seasonality_plot.png** (Figure 2A)
 
 -   **annual_summary.png** (Figure 2B)
 
--   **Figure_2.png** (final figure combined in Illustrator)
+-   **overall_abundance.png** (Figure S1)
 
 #### Folder "scripts" houses the following file
 
