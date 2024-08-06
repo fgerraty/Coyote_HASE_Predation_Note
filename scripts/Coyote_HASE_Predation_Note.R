@@ -70,13 +70,44 @@ sd(predation_observations$length, na.rm = TRUE)/sqrt(length(na.omit(predation_ob
 
 # Assess proportion of coyote-killed harbor seal pups in first 20 days of pupping season (April 14th - May 4th) ####
 
-temp <- predation_observations %>% 
+count(predation_observations %>% 
   filter(day > 104 & 
-         day < 124)
+         day < 124)) / 55 #55 total predation events at MacKerricher SP
 
 # PART 4: Generate Figures ----------------------------------------------------
 
-# Count Plot ####
+# Figure 2A: Timing Plot ####
+
+#Mendocino predation events timing summary
+
+MC_predation_timing <- predation_observations %>% 
+  filter(observation_location == "MacKerricher State Park, Mendocino County, CA") %>% 
+  group_by(day) %>% 
+  summarise(count = n())
+
+
+ggplot(seal_counts_pre2018, aes(x=day, y=pup))+
+  geom_point(alpha = .7, shape=16)+
+  geom_vline(data = MC_predation_timing, 
+             aes(xintercept = day, size=count), color = "red") +
+  theme_few()+
+  labs(y = "# Pups Observed (all years)", x="Day of Year", size = "# Coyote-Killed\nPups per Julian Day\n(sum of all years)")+
+  geom_smooth(method = "gam", color = "black")+
+  scale_size_continuous(range = c(.5,1.5), 
+                        breaks= c(1,2,3,4),
+                        labels = c(1,2,3,4))+
+  guides(size=guide_legend(override.aes=list(colour="red")))+
+  coord_cartesian(ylim = c(-2,50), xlim = c(92,165))+
+  guides(size = guide_legend(nrow=1,
+                             label.position = "top"))+
+  theme(legend.position = c(0.86, 0.83),
+        legend.box.background = element_rect(colour = "black", linewidth = 1),
+        panel.border = element_rect(colour = "black", linewidth = 1))
+
+
+ggsave("output/seasonality_plot.png", width = 7, height = 4.5, units = "in")
+
+# Figure 2B: Count Plot ####
 
 ggplot(seal_count_summary, 
        aes(x=year, y=max_count, 
@@ -113,33 +144,22 @@ ggplot((seal_count_summary %>%
 ggsave("output/annual_summary.png", width = 7, height = 4.5, units = "in")
 
 
-# Timing Plot ####
+# Figure S1: Adult and Pup Abundance Trends ####
 
-#Mendocino predation events timing summary
 
-MC_predation_timing <- predation_observations %>% 
-  filter(observation_location == "MacKerricher State Park, Mendocino County, CA") %>% 
-  group_by(day) %>% 
-  summarise(count = n())
-  
-
-ggplot(seal_counts_pre2018, aes(x=day, y=pup))+
-  geom_point(alpha = .7, shape=16)+
-  geom_vline(data = MC_predation_timing, 
-             aes(xintercept = day, size=count), color = "red") +
+ggplot((seal_count_summary),
+       aes(x=year, y=max_count, 
+           fill = factor(age, 
+                         levels = c( "dead_pup", "pup","adult"))))+
+  #Stacked bar chart
+  geom_bar(stat = "identity", position="stack")+
   theme_few()+
-  labs(y = "# Pups Observed (all years)", x="Day of Year", size = "# Coyote-Killed\nPups per Julian Day\n(sum of all years)")+
-  geom_smooth(method = "gam", color = "black")+
-  scale_size_continuous(range = c(.5,1.5), 
-                        breaks= c(1,2,3,4),
-                        labels = c(1,2,3,4))+
-  guides(size=guide_legend(override.aes=list(colour="red")))+
-  coord_cartesian(ylim = c(-2,50), xlim = c(92,165))+
-  guides(size = guide_legend(nrow=1,
-                             label.position = "top"))+
-  theme(legend.position = c(0.86, 0.83),
+  labs(y = "Maximum # Individuals Documented Per Year", 
+       x="Year", fill = "Category")+
+  scale_fill_manual(values = c("red", "#6497bf", "#440154FF"), labels = c("Coyote-\nKilled Pup", "Pup (Alive)", "Adult"))+
+  theme(legend.position = c(0.901, 0.84),
         legend.box.background = element_rect(colour = "black", linewidth = 1),
         panel.border = element_rect(colour = "black", linewidth = 1))
 
 
-ggsave("output/seasonality_plot.png", width = 7, height = 4.5, units = "in")
+ggsave("output/overall_abundance.png", width = 7, height = 4.5, units = "in")
