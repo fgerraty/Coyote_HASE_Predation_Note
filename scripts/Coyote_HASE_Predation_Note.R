@@ -91,21 +91,24 @@ ggplot(seal_counts_pre2018, aes(x=day, y=pup))+
   geom_vline(data = MC_predation_timing, 
              aes(xintercept = day, size=count), color = "red") +
   theme_few()+
-  labs(y = "# Pups Observed (all years)", x="Day of Year", size = "# Coyote-Killed\nPups per Julian Day\n(sum of all years)")+
+  labs(y = "# Pups Observed (all years)", x="", size = "# Coyote-Killed\nPups per Julian Day\n(sum of all years)")+
   geom_smooth(method = "gam", color = "black")+
   scale_size_continuous(range = c(.5,1.5), 
                         breaks= c(1,2,3,4),
                         labels = c(1,2,3,4))+
+  scale_x_continuous(breaks = c(91, 121, 152), 
+                     labels = c("April 1", "May 1", "June 1"))+
   guides(size=guide_legend(override.aes=list(colour="red")))+
   coord_cartesian(ylim = c(-2,50), xlim = c(92,165))+
   guides(size = guide_legend(nrow=1,
                              label.position = "top"))+
-  theme(legend.position = c(0.86, 0.83),
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        legend.position = c(0.86, 0.83),
         legend.box.background = element_rect(colour = "black", linewidth = 1),
         panel.border = element_rect(colour = "black", linewidth = 1))
 
 
-ggsave("output/seasonality_plot.png", width = 7, height = 4.5, units = "in")
+ggsave("output/seasonality_plot.png", width = 7, height = 4.8, units = "in")
 
 # Figure 2B: Count Plot ####
 
