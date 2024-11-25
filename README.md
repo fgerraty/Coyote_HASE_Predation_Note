@@ -1,6 +1,6 @@
 # Coyotes hunt harbor seal pups on the California coast
 
-*FD Gerraty, S Grimes, S Pemberton, S Allen, S Codde. In Review.*
+*FD Gerraty, S Grimes, S Pemberton, S Allen, S Codde.*
 
 This repository contains data and code used to generate Figure 2 in the manuscript "*Coyotes hunt harbor seal pups on the California coast*", in which we describe coyote predation of harbor seal pups at three locations from 2016-2024.
 
