@@ -10,7 +10,7 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
 
 ![](output/Figure_2.png)
 
-**Figure 2.** (A) Seasonality of harbor seal pupping and coyote predation at MacKerricher State Beach. Black points represent the total number of pups counted (pooled across 2011-2018), the black line is a generalized additive model fitted to the pup counts, and the red vertical lines represent suspected and confirmed coyote predation events on harbor seal pups. (B) Abundance (maximum annual count) of harbor seal pups and counts of suspected or confirmed coyote predation events at MacKerricher State Beach. \*Rookery monitoring was limited during the 2020 harbor seal pupping season due to COVID-19 restrictions, likely resulting in reduced maximum pup and coyote-killed pup counts.
+**Figure 2.** (A) Seasonality of harbor seal pupping and coyote predation at MacKerricher State Beach. Black points represent the total number of pups counted (pooled across 2011-2018), the black line is a generalized additive model fitted to the pup counts, and the red vertical lines represent suspected and confirmed coyote predation events on harbor seal pups. (B) Abundance (maximum annual count during March 1 – June 30 pupping season) of harbor seal pups and counts of suspected or confirmed coyote predation events at MacKerricher State Beach. \*Rookery monitoring was limited during the 2020 harbor seal pupping season due to COVID-19 restrictions, likely resulting in reduced maximum pup and coyote-killed pup counts.
 
 ------------------------------------------------------------------------
 
