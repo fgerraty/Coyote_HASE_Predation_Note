@@ -65,3 +65,9 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
 #### Folder "[scripts](https://github.com/fgerraty/Coyote_HASE_Predation_Note/tree/main/scripts)" houses the following file
 
 -   **Coyote_HASE_Predation_Note.R** is the only R script associated with the repository. This script imports, cleans, and manipulates all data files and produces **seasonality_plot.png** and **annual_summary.png** in the "output" folder.
+
+------------------------------------------------------------------------
+
+A high-definition version of Video S1 from the manuscript is available via Zenodo here:
+
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.13328687.svg)](https://doi.org/10.5281/zenodo.13328687)
