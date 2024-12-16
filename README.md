@@ -42,7 +42,7 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
 
     -   Date
     -   Time
-    -   Duration (Hours)
+    -   Duration (hours)
     -   Adult (minimum number of unique harbor seal adults counted during survey)
     -   Pup (minimum number of unique harbor seal pups counted during survey)
 
