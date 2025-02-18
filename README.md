@@ -30,7 +30,7 @@ There is one R script associated with the manuscript, **"Coyote_HASE_Predation_N
     -   length (harbor seal standard length, cm)
     -   length_actual_estimate (whether seal length was directly measured --- "actual"--- or needed to be estimated due to skull disarticulation from vertebral column --- "estimate")
 
--   [**MacKerricher_HASE_Counts_Post2018.csv**](https://github.com/fgerraty/Coyote_HASE_Predation_Note/blob/main/data/MacKerricher_HASE_Counts_Post2018.csv) containing raw data from harbor seal population monitoring surveys at MacKerricher State Park from 2009-2018.
+-   [**MacKerricher_HASE_Counts_Post2018.csv**](https://github.com/fgerraty/Coyote_HASE_Predation_Note/blob/main/data/MacKerricher_HASE_Counts_Post2018.csv) containing raw data from harbor seal population monitoring surveys at MacKerricher State Park from 2018-2024.
 
     Columns
 
